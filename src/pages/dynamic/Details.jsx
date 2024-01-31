@@ -44,7 +44,10 @@ const Details = () => {
     <div>
       <div className="my-5">
         {currentShow.map((data) => (
-          <div key={data.show.id} className="w-11/12 md:w-10/12 lg:w-9/12 mx-auto">
+          <div
+            key={data.show.id}
+            className="w-11/12 md:w-10/12 lg:w-9/12 mx-auto"
+          >
             <div className="grid grid-cols-1 md:grid-cols-12 gap-3">
               <div className="col-span-12 md:col-span-8">
                 <h1 className="text-3xl font-bold mb-3 uppercase">
@@ -52,7 +55,11 @@ const Details = () => {
                 </h1>
                 <div className="flex flex-col lg:flex-row gap-3">
                   <img
-                    src={data?.show?.image?.original}
+                    src={`${
+                      data?.show?.image?.medium == null
+                        ? "https://i.ibb.co/nfm9PvB/R.jpg"
+                        : data?.show?.image?.medium
+                    }`}
                     alt={data?.show?.name}
                     width={200}
                   />

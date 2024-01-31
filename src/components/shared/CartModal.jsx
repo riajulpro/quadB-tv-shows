@@ -35,9 +35,9 @@ const CartModal = ({ closeFn, data }) => {
       const newCartData = [...existingCartData, newItem];
       updateCartData(newCartData);
 
-      toast.success("Item successfully added!", { duration: 2500 });
-
       closeFn();
+
+      toast.success("Item successfully added!", { duration: 2500 });
     } else {
       toast.error("Item is already in the cart", { duration: 2500 });
     }
