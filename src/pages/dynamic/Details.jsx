@@ -5,6 +5,7 @@ import "./Details.css";
 import { useState } from "react";
 import CartModal from "../../components/shared/CartModal";
 import { FaInfoCircle } from "react-icons/fa";
+import { Toaster } from "react-hot-toast";
 
 const Details = () => {
   // GETTING THE ESSENTIALS
@@ -84,28 +85,32 @@ const Details = () => {
                     <span>{data?.show?.network?.name}</span>
                   </p>
                   <p className="text-xs">
-                    <span className="font-bold">Schedule: </span>
-                    <span>{data?.show?.network?.name}</span>
+                    <span className="font-bold">Runtime: </span>
+                    <span>{data?.show?.network?.runtime}</span>
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Status: </span>
-                    <span>{data?.show?.network?.name}</span>
+                    <span>{data?.show?.network?.status}</span>
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Show Type: </span>
-                    <span>{data?.show?.network?.name}</span>
+                    <span>{data?.show?.network?.type}</span>
                   </p>
                   <p className="text-xs">
-                    <span className="font-bold">Genres: </span>
-                    <span>{data?.show?.network?.name}</span>
+                    <span className="font-bold">Language: </span>
+                    <span>{data?.show?.network?.language}</span>
                   </p>
                   <p className="text-xs">
-                    <span className="font-bold">Episode Ordered: </span>
-                    <span>{data?.show?.network?.name}</span>
+                    <span className="font-bold">Genre: </span>
+                    <span>
+                      {data?.show?.genres?.map((genre) => (
+                        <span key={genre}>{genre} | </span>
+                      ))}
+                    </span>
                   </p>
                   <p className="text-xs">
-                    <span className="font-bold">Created By: </span>
-                    <span>{data?.show?.network?.name}</span>
+                    <span className="font-bold">Premiered: </span>
+                    <span>{data?.show?.network?.premiered}</span>
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Official Site: </span>
@@ -117,7 +122,7 @@ const Details = () => {
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Rating: </span>
-                    <span>{data?.show?.network?.name}</span>
+                    <span>{data?.show?.network?.rating?.average}</span>
                   </p>
                 </div>
               </div>
@@ -129,6 +134,7 @@ const Details = () => {
                 ""
               )}
             </div>
+            <Toaster />
           </div>
         ))}
       </div>
