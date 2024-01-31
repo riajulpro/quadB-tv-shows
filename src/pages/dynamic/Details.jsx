@@ -86,19 +86,19 @@ const Details = () => {
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Runtime: </span>
-                    <span>{data?.show?.network?.runtime}</span>
+                    <span>{data?.show?.runtime}</span>
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Status: </span>
-                    <span>{data?.show?.network?.status}</span>
+                    <span>{data?.show?.status}</span>
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Show Type: </span>
-                    <span>{data?.show?.network?.type}</span>
+                    <span>{data?.show?.type}</span>
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Language: </span>
-                    <span>{data?.show?.network?.language}</span>
+                    <span>{data?.show?.language}</span>
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Genre: </span>
@@ -110,7 +110,7 @@ const Details = () => {
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Premiered: </span>
-                    <span>{data?.show?.network?.premiered}</span>
+                    <span>{data?.show?.premiered}</span>
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Official Site: </span>
@@ -122,7 +122,7 @@ const Details = () => {
                   </p>
                   <p className="text-xs">
                     <span className="font-bold">Rating: </span>
-                    <span>{data?.show?.network?.rating?.average}</span>
+                    <span>{data?.show?.rating?.average}</span>
                   </p>
                 </div>
               </div>
